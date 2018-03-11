@@ -1,0 +1,26 @@
+body {
+  background: #00537A url("/../images/login.jpg") no-repeat;
+  background-size: cover;
+}
+.login-top-bottom {
+  margin: 9% 0;
+}
+.login-logo {
+  padding-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.login-border-radius1 {
+  border-radius: 5px 5px 0 0;
+}
+.login-content {
+  padding: 15px;
+}
+.login-border-radius {
+  border-radius: 0 0 5px 5px;
+}
+.col-form-label {
+  padding-top: calc(0.375rem + 1px);
+  padding-bottom: calc(0.375rem + 1px);
+  margin-bottom: 0;
+  line-height: 1.8;
+}
