@@ -2,6 +2,12 @@ body {
   background: #00537A url("/../images/login.jpg") no-repeat;
   background-size: cover;
 }
+// Header 
+.header {
+  background: url("/../images/rrhh_header.jpeg") no-repeat;
+  background-size: cover;
+  min-height: 300px;
+}
 .login-top-bottom {
   margin: 9% 0;
 }
