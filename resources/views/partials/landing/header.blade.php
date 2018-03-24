@@ -11,12 +11,12 @@
           </li>                             
           <li class="nav-item active">
             <a class="nav-link" href="#organigram">Estructura organizativa <span class="sr-only">(Estructura organizativa)</span></a>
-          </li>                             
+          </li>                                                                    
           <li class="nav-item active">
-            <a class="nav-link" href="#selection">Selección <span class="sr-only">(Selección)</span></a>
-          </li>                             
+            <a class="nav-link" href="#selection">Captación <span class="sr-only">(Captación)</span></a>
+          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#application">Captación <span class="sr-only">(Captación)</span></a>
+            <a class="nav-link" href="#application">Oportunidades <span class="sr-only">(Oportunidades)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="#contact">Contáctenos <span class="sr-only">(Contáctenos)</span></a>

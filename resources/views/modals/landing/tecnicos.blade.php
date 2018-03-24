@@ -8,7 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <p>Captar de forma anticipada talento joven con capacidades técnico/operativo básicas para desarrollarte en las áreas de manufactura, producción y logística en la organización.</p>
+        <p>Captar de forma anticipada talento joven con capacidades técnico/operativo.</p>
         <h5 class="font-weight-bold">¿Qué beneficios tiene para ti como candidato participar en el programa?</h5>
         <ul class="list-unstyled">
           <li>Oportunidad de participar en procesos de selección para conseguir empleo en áreas técnicas.</li>

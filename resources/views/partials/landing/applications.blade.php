@@ -2,7 +2,7 @@
   <div class="container">          
     <div class="card-deck">
       <div class="card">  
-        <div class="card-header">Captación de Pasantes</div>      
+        <div class="card-header">Pasantes</div>      
         <img class="card-img-top" src="{{ asset('images/interns.jpg') }}" alt="Pasantes">
         <div class="card-img-overlay d-flex align-items-end justify-content-center">
           <p class="card-text">
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">Captación de Aprendices</div>
+        <div class="card-header">Aprendices</div>
         <img class="card-img-top" src="{{ asset('images/learning.jpg') }}" alt="Aprendices">
         <div class="card-img-overlay d-flex align-items-end justify-content-center">
           <p class="card-text">
@@ -28,7 +28,7 @@
         </div>        
       </div>
       <div class="card">
-        <div class="card-header">Captación de Técnicos</div>
+        <div class="card-header">Técnicos</div>
         <img class="card-img-top" src="{{ asset('images/technic.jpeg') }}" alt="T[ecnicos">
         <div class="card-img-overlay d-flex align-items-end justify-content-center">
           <p class="card-text">
@@ -41,7 +41,7 @@
         </div>        
       </div>
       <div class="card">
-        <div class="card-header">Captación de Profesionales</div>
+        <div class="card-header">Profesionales</div>
         <img class="card-img-top" src="{{ asset('images/professional.jpeg') }}" alt="Profesional">
         <div class="card-img-overlay d-flex align-items-end justify-content-center">
           <p class="card-text">

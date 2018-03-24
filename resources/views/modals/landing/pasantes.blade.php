@@ -11,8 +11,7 @@
         <p>Captar de forma anticipada estudiantes universitarios potenciales a realizar pasantías regulares o tesis/proyecto industrial en las áreas claves y de mayor demanda de la organización, con el objeto de intencionar una base de datos  de posibles talentos del segmento profesional.</p>
         <h5 class="font-weight-bold">¿Qué beneficios tiene para ti como candidato participar en el programa?</h5>
         <ul class="list-unstyled">
-          <li>Oportunidad de participar en procesos de selección para realizar pasantías regulares y tesis.</li>
-          <li>Empresas Polar como “laboratorio de aprendizaje” y aplicación de conocimientos para ti.</li>
+          <li>Oportunidad de participar en procesos de selección para realizar pasantías regulares y tesis.</li>          
           <li>Estar expuesto a la realidad organizacional que te facilitará la adaptación al ambiente laboral una vez culmines tus estudios.</li>
           <li>Brindarte como estudiante un espacio de formación y desarrollo de sus conocimientos, destrezas y habilidades, aplicadas en el campo laboral de acuerdo a tu carrera de estudio.</li>
         </ul>
