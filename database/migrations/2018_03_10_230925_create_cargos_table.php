@@ -15,9 +15,10 @@ class CreateCargosTable extends Migration
     {
         Schema::create('cargos', function (Blueprint $table) {
             $table->increments('id');
-            $table->mediumText('descripcion');
-            $table->mediumText('funciones');
-            $table->string('perfil');
+            $table->mediumText('nombre');            
+            $table->integer('tabulador_salarial_id')->unsigned();
+            $table->string('perfil')->nullable();
+            $table->foreign('tabulador_salarial_id')->references('id')->on('tabuladores_salariales');
             $table->timestamps();
         });
     }

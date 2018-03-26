@@ -18,7 +18,7 @@ class CreateAspirantesTable extends Migration
             $table->integer('cedula_aspirante')->unique();
             $table->string('apellido',50);
             $table->string('nombre',50);
-            $table->string('email',20)->unique();
+            $table->string('email',60)->unique();
             $table->enum('nivel_academico', ['bachiller', 'tsu', 'licdo', 'licda', 'ing', 'm.sc', 'dr', 'dra']);
             $table->string('direccion',255);
             $table->string('estado',50);

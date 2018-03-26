@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('rrhh', function () {
     return view('rrhh');
 });
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('dashboard', function() {
+        return view('admin.gerente.dashboard', $data = [], $mergeData = []);
+    });
+});

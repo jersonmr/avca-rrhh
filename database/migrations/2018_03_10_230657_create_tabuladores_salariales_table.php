@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTurnosGuardiasTable extends Migration
+class CreateTabuladoresSalarialesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateTurnosGuardiasTable extends Migration
      */
     public function up()
     {
-        Schema::create('turnos_guardias', function (Blueprint $table) {
+        Schema::create('tabuladores_salariales', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('jornadas_laborales');
+            $table->integer('nivel');
+            $table->float('sueldo_base');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateTurnosGuardiasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('turnos_guardias');
+        Schema::dropIfExists('tabuladores_salariales');
     }
 }
