@@ -113,13 +113,13 @@ class TabuladorSalarialTableSeeder extends Seeder
                 'updated_at' => date("Y-m-d H:i:s")
             ],
             [
-                'nivel'      => '302',
+                'nivel'      => '303',
                 'sueldo_base'=> '6265.87',
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s")
             ],
             [
-                'nivel'      => '303',
+                'nivel'      => '304',
                 'sueldo_base'=> '6892.46',
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s")
