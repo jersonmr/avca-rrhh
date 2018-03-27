@@ -2,8 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Admin Layout</title>
+    <link rel="stylesheet" href="{{ asset('css/fa-svg-with-js.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <style>
+        .nav-link {
+            color: white;
+        }
+        .nav-link:hover {
+            color: whitesmoke;
+        }
+    </style>
 </head>
 <body>
     <header class="admin-header">
@@ -29,10 +39,19 @@
         <div class="row no-gutters">
             <div class="col-12 col-lg-2">                
                 <aside>
-                    <ul class="nav bg-dark flex-column text-white" style="min-height: 100vh;">
-                        <li class="nav-item text-center py-3 text-uppercase">Dashboard</li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Item 1</a>
+                    <ul class="nav bg-dark flex-column text-white" style="min-height: 100vh; flex: 1;">
+                        <li class="nav-item text-center py-3 text-uppercase">Módulo RRHH</li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#captacionPersonal" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="captacionPersonal">
+                                Captación de personal
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                            <div class="collapse" id="captacionPersonal">
+                                <a href="#" class="nav-link">Reclutamiento</a>
+                                <a href="#" class="nav-link">Selección</a>
+                                <a href="#" class="nav-link">Contratación</a>
+                                <a href="#" class="nav-link">Movimientos de empleado</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Item 2</a>
@@ -57,11 +76,9 @@
                 </nav>
 
                 {{-- Seccion principal --}}
-                <main class="main">
+                <main class="main" id="app">
                     <div class="container">
-                        <div class="row">
-                            
-                        </div>
+                        @include('admin.gerente.partials.captacion.contratacion')
                     </div>
                 </main>
             </div>
@@ -70,7 +87,14 @@
     </div>
 
     <footer class="footer">
-        
+
     </footer>
+
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/fontawesome-all.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-filestyle.min.js') }}"></script>
+    <script src="{{ asset('js/vue.js') }}"></script>
+    <script src="{{ asset('js/rrhh.js') }}"></script>
+    @yield('scripts')
 </body>
 </html>
