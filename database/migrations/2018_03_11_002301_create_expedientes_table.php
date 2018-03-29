@@ -15,8 +15,14 @@ class CreateExpedientesTable extends Migration
     {
         Schema::create('expedientes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('antiguedad');
-            $table->string('cargo');
+            $table->string('num_oficio')->unique();
+            $table->date('fecha');
+            $table->longText('descripcion');            
+            $table->date('fecha_inicio');
+            $table->date('fecha_final');
+            $table->string('soporte_pdf');
+            $table->integer('empleado_id')->unsigned();
+            $table->foreign('empleado_id')->references('id')->on('empleados');
             $table->timestamps();
         });
     }

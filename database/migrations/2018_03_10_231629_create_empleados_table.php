@@ -15,17 +15,34 @@ class CreateEmpleadosTable extends Migration
     {
         Schema::create('empleados', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('condicion_laboral', ['fijo', 'contratado', 'inactivo']);
+            $table->string('foto');
+            $table->string('nombre');
+            $table->string('apellido');
+            $table->integer('cedula')->unique();
+            $table->string('rif')->unique();            
+            $table->integer('codigo_postal')->unique();
+            $table->string('estado');
+            $table->string('ciudad');
+            $table->string('direccion');
+            $table->enum('tipo_discapacidad', ['trastorno del habla y lenguaje', 'visual', 'motriz', 'auditiva']);
+            $table->string('email', 60)->unique();
+            $table->string('password', 60);
+            $table->date('fecha_nacimiento');
+            $table->enum('genero', ['femenino', 'masculino']);
+            $table->enum('estado_civil', ['solter@', 'casad@', 'divorciad@', 'viud@', 'concubin@']);
+            $table->enum('nacionalidad', ['venezolan@', 'extranjer@']);
+            $table->string('telefono_fijo', 15);
+            $table->string('telefono_movil', 15);
+            $table->string('cod_empleado')->unique();
+            $table->enum('condicion_laboral', ['fijo', 'contratado', 'inactivo', 'suplente']);
             $table->bigInteger('cuenta_bancaria');
-            $table->enum('estado_civil', ['soltero', 'casado', 'divorciado', 'viudo', 'concubino']);
-            $table->string('grado_licencia');
-            $table->date('fecha_ingreso');
-            $table->string('lugar_nacimiento');
-            $table->integer('num_hijos');
-            $table->string('rif');
-            $table->timestamps();
-            $table->enum('estatus', ['activo', 'inactivo']);
-            $table->mediumText('motivo')->nullable();
+            $table->enum('tipo_empleado', ['administrativo', 'operativo', 'tripulacion']);
+            $table->enum('nivel_academico', ['bachiller', 'tsu', 'profesional', 'especialista 1', 'especialista 2']);
+            $table->enum('tipo_horario', ['fijo', 'rotativo']);
+            $table->string('profesion');
+            $table->integer('cargo_id')->unsigned();
+            $table->integer('perfil_id')->unsigned();
+            $table->timestamps();            
         });
     }
 

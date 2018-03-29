@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSintesisCurricularTable extends Migration
+class CreateTipoExpedienteTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateSintesisCurricularTable extends Migration
      */
     public function up()
     {
-        Schema::create('sintesis_curricular', function (Blueprint $table) {
+        Schema::create('tipo_expediente', function (Blueprint $table) {
             $table->increments('id');
-            $table->longText('descripcion');
-            $table->date('fecha');
-            $table->enum('nivel_academico', ['bachiller', 'tsu', 'licdo', 'licda', 'ing', 'm.sc', 'dr', 'dra']);
+            $table->string('nombre');            
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateSintesisCurricularTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sintesis_curricular');
+        Schema::dropIfExists('tipo_expediente');
     }
 }

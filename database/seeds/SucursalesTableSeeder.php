@@ -16,7 +16,7 @@ class SucursalesTableSeeder extends Seeder
             
             [ 
                'tipo_sucursal'=>  'Operativa',
-               'nombre'       => 'jose antonio anzoategui',
+               'nombre'       => 'jose antonio anzoátegui',
                'estado'       => 'activa',
                'ciudad'       => 'Barcelona',
                'codigo_postal'=> '6001'         

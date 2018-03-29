@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReconocimientosTable extends Migration
+class CreateProfesionesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateReconocimientosTable extends Migration
      */
     public function up()
     {
-        Schema::create('reconocimientos', function (Blueprint $table) {
+        Schema::create('profesiones', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('num_oficio');
-            $table->mediumText('descripcion');
+            $table->string('titulo');
+            $table->enum('nivel_academico', ['bachiller', 'tsu', 'profesional', 'especialista 1', 'especialista 2']);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateReconocimientosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reconocimientos');
+        Schema::dropIfExists('profesiones');
     }
 }

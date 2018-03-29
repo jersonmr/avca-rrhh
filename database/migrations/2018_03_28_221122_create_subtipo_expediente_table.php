@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLicenciasTable extends Migration
+class CreateSubtipoExpedienteTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateLicenciasTable extends Migration
      */
     public function up()
     {
-        Schema::create('licencias', function (Blueprint $table) {
+        Schema::create('subtipo_expediente', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tipo_licencia',20);
-            $table->string('descripcion',255);
-            $table->date('fecha_inicio');
-            $table->date('fecha_final');
-
+            $table->string('nombre');
+            $table->integer('tipo_expediente_id')->unsigned();
+            $table->foreign('tipo_expediente_id')->references('id')->on('tipo_expediente');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateLicenciasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('licencias');
+        Schema::dropIfExists('subtipo_expediente');
     }
 }

@@ -19,9 +19,12 @@ class CreateCargasFamiliaresTable extends Migration
             $table->string('apellido');
             $table->string('cedula_beneficiario');
             $table->date('fecha_nacimiento');
-            $table->integer('status');
+            $table->integer('estatus');
             $table->enum('genero',['masculino','femenino']);
-            $table->string('parentesco');
+            $table->enum('parentesco', ['hijos', 'padres', 'conyugue']);
+            $table->integer('empleado_id')->unsigned();
+
+            $table->foreign('empleado_id')->references('id')->on('empleados');
 
             $table->timestamps();
         });

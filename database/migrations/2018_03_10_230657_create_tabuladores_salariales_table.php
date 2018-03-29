@@ -15,7 +15,8 @@ class CreateTabuladoresSalarialesTable extends Migration
     {
         Schema::create('tabuladores_salariales', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('nivel');
+            $table->integer('cod_nivel')->unique();
+            $table->string('nivel');
             $table->float('sueldo_base');
             $table->timestamps();
         });
