@@ -1,143 +1,155 @@
 const app = new Vue({
     el: '#app',
     data: {
-        test: 'Hola test',
         bancos: [
             {
                 "banco":"100% BANCO",
-                "codigo":0156
+                "codigo": "0156"
             },
             {
                 "banco":"ABN AMRO BANK",
-                "codigo":0196
+                "codigo": "0196"
             },
             {
                 "banco":"BANCAMIGA BANCO MICROFINANCIERO, C.A.",
-                "codigo":0172
+                "codigo": "0172"
             },
             {
                 "banco":"BANCO ACTIVO BANCO COMERCIAL, C.A.",
-                "codigo":0171
+                "codigo": "0171"
             },
             {
                 "banco":"BANCO AGRICOLA",
-                "codigo":0166
+                "codigo": "0166"
             },
             {
                 "banco":"BANCO BICENTENARIO",
-                "codigo":0175
+                "codigo": "0175"
             },
             {
                 "banco":"BANCO CARONI, C.A. BANCO UNIVERSAL",
-                "codigo":0128
+                "codigo": "0128"
             },
             {
                 "banco":"BANCO DE DESARROLLO DEL MICROEMPRESARIO",
-                "codigo":0164
+                "codigo": "0164"
             },
             {
                 "banco":"BANCO DE VENEZUELA S.A.I.C.A.",
-                "codigo":0102
+                "codigo": "0102"
             },
             {
                 "banco":"BANCO DEL CARIBE, C.A.",
-                "codigo":0114
+                "codigo": "0114"
             },
             {
                 "banco":"BANCO DEL PUEBLO SOBERANO, C.A.",
-                "codigo":0149
+                "codigo": "0149"
             },
             {
                 "banco":"BANCO DEL TESORO",
-                "codigo":0163
+                "codigo": "0163"
             },
             {
                 "banco":"BANCO ESPIRITO SANTO, S.A.",
-                "codigo":0176
+                "codigo": "0176"
             },
             {
                 "banco":"BANCO EXTERIOR, C.A.",
-                "codigo":0115
+                "codigo": "0115"
             },
             {
                 "banco":"BANCO INDUSTRIAL DE VENEZUELA.",
-                "codigo":0003
+                "codigo": "0003"
             },
             {
                 "banco":"BANCO INTERNACIONAL DE DESARROLLO, C.A.",
-                "codigo":0173
+                "codigo": "0173"
             },
             {
                 "banco":"BANCO MERCANTIL, C.A.",
-                "codigo":0105
+                "codigo": "0105"
             },
             {
                 "banco":"BANCO NACIONAL DE CREDITO",
-                "codigo":0191
+                "codigo": "0191"
             },
             {
                 "banco":"BANCO OCCIDENTAL DE DESCUENTO.",
-                "codigo":0116
+                "codigo": "0116"
             },
             {
                 "banco":"BANCO PLAZA",
-                "codigo":0138
+                "codigo": "0138"
             },
             {
                 "banco":"BANCO PROVINCIAL BBVA",
-                "codigo":0108
+                "codigo": "0108"
             },
             {
                 "banco":"BANCO VENEZOLANO DE CREDITO, S.A.",
-                "codigo":0104
+                "codigo": "0104"
             },
             {
                 "banco":"BANCRECER S.A. BANCO DE DESARROLLO",
-                "codigo":0168
+                "codigo": "0168"
             },
             {
                 "banco":"BANFANB",
-                "codigo":0177
+                "codigo": "0177"
             },
             {
                 "banco":"BANGENTE",
-                "codigo":0146
+                "codigo": "0146"
             },
             {
                 "banco":"BANPLUS BANCO COMERCIAL, C.A",
-                "codigo":0174
+                "codigo": "0174"
             },
             {
                 "banco":"CITIBANK",
-                "codigo":0190
+                "codigo": "0190"
             },
             {
                 "banco":"CORP BANCA.",
-                "codigo":0121
+                "codigo": "0121"
             },
             {
                 "banco":"DELSUR BANCO UNIVERSAL",
-                "codigo":0157
+                "codigo": "0157"
             },
             {
                 "banco":"FONDO COMÚN",
-                "codigo":0151
+                "codigo": "0151"
             },
             {
                 "banco":"INSTITUTO MUNICIPAL DE CRÉDITO POPULAR",
-                "codigo":0601
+                "codigo": "0601"
             },
             {
                 "banco":"MIBANCO BANCO DE DESARROLLO, C.A.",
-                "codigo":0169
+                "codigo": "0169"
             },
             {
                 "banco":"SOFITASA",
-                "codigo":0137
+                "codigo": "0137"
             }
-        ]
+        ],
+        bancoSelected: 'Seleccione',
+        codigo_cuenta: null
     },
     mounted: function () {
         //console.log(this.bancos);
+    },
+    methods: {
+        checkBanco: function () {
+            var that = this;
+            var banco = this.bancoSelected;
+            this.bancos.forEach(function (element) {
+                if (banco === element.banco) {
+                    that.codigo_cuenta = element.codigo;
+                }
+            })
+        }
     }
 });

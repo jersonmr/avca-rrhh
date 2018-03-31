@@ -210,16 +210,20 @@
             <div class="col-md-3">
                 <div class="form-group">
                     {!! Form::label('banco', 'Banco') !!}
-                    <select name="banco" id="banco" class="form-control">
-                        <option value="" selected="selected">Seleccione</option>
+                    <select name="banco" id="banco" class="form-control" @change="checkBanco" v-model="bancoSelected">
                         <option v-for="banco in bancos" :value="banco.banco">@{{ banco.banco }}</option>
                     </select>
                 </div>                
             </div>
             <div class="col-md-9">
-                <div class="form-group">
-                    {!! Form::label('cuenta_bancaria', 'Número de cuenta bancaria') !!}
-                    {!! Form::text('cuenta_bancaria', null, ['class' => 'form-control']) !!}
+                {!! Form::label('cuenta_bancaria', 'Número de cuenta bancaria') !!}
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                            <input type="text" name="codigo_cuenta" id="codigo_cuenta" v-model="codigo_cuenta" size="4" readonly="readonly">
+                        </span>
+                    </div>
+                    {!! Form::text('cuenta_bancaria', null, ['class' => 'form-control', 'maxlength' => 16]) !!}
                 </div>
             </div>
         </div>
