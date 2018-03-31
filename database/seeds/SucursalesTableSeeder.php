@@ -15,131 +15,115 @@ class SucursalesTableSeeder extends Seeder
         DB::table('sucursales')->insert([
             
             [ 
-               'tipo_sucursal'=>  'Operativa',
+               'tipo_sucursal'=>  'operativa',
                'nombre'       => 'jose antonio anzoátegui',
-               'estado'       => 'activa',
-               'ciudad'       => 'Barcelona',
-               'codigo_postal'=> '6001'         
+               'estatus'       => 'activa',
+               'ciudad'       => 'Barcelona',               
             ],
 
             [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'Manuel Piar',
-                'estado'       => 'activa',
-                'ciudad'       => 'Puerto Ordaz',
-                'codigo_postal'=> '8050'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'Puerto Ordaz',                    
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'Arturo Michelena',
-                'estado'       => 'activa',
-                'ciudad'       => 'Valencia',
-                'codigo_postal'=> '2001'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'Valencia',                
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'Josefa Camejo',
-                'estado'       => 'activa',
-                'ciudad'       => 'Punto Fijo',
-                'codigo_postal'=> '4102'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'Punto Fijo',                
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'Jacinto Lara',
-                'estado'       => 'activa',
-                'ciudad'       => 'Barquisimeto',
-                'codigo_postal'=> '3001'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'Barquisimeto',                  
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'Juan Pablo Perez Alfonzo',
-                'estado'       => 'activa',
-                'ciudad'       => 'el vigia',
-                'codigo_postal'=> '5145'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'el vigia',                
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'Jose Tadeo Monagas',
-                'estado'       => 'activa',
-                'ciudad'       => 'Maturin',
-                'codigo_postal'=> '6201'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'Maturin',                    
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'Santiago Mariño',
-                'estado'       => 'activa',
-                'ciudad'       => 'Porlamar',
-                'codigo_postal'=> '6301'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'Porlamar',                     
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'Simon Bolivar',
-                'estado'       => 'activa',
-                'ciudad'       => 'Maiquetia',
-                'codigo_postal'=> '1160'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'Maiquetia',                    
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'La Chinita',
-                'estado'       => 'activa',
-                'ciudad'       => 'Maracaibo',
-                'codigo_postal'=> '4004'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'Maracaibo',                   
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'Cacique Arame',
-                'estado'       => 'activa',
-                'ciudad'       => 'Puerto Ayacucho',
-                'codigo_postal'=> '7101'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'Puerto Ayacucho',                   
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'Don Edmundo Barrios',
-                'estado'       => 'activa',
-                'ciudad'       => 'San tome',
-                'codigo_postal'=> '6055'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'San tome',                
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'las Flecheras',
-                'estado'       => 'activa',
-                'ciudad'       => 'San Fernando De Apure',
-                'codigo_postal'=> '7001'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'San Fernando De Apure',                    
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'Luisa Caceres de Arismendi',
-                'estado'       => 'activa',
-                'ciudad'       => 'Barinas',
-                'codigo_postal'=> '5201'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'Barinas',                
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'Tomas de Heres',
-                'estado'       => 'activa',
-                'ciudad'       => 'Ciudad Bolivar',
-                'codigo_postal'=> '8001'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'Ciudad Bolivar',                     
              ],
 
              [ 
-                'tipo_sucursal'=>  'Operativa',
+                'tipo_sucursal'=>  'operativa',
                 'nombre'       => 'Antonio Jose de Sucre',
-                'estado'       => 'activa',
-                'ciudad'       => 'Cumana',
-                'codigo_postal'=> '6101'         
+                'estatus'       => 'activa',
+                'ciudad'       => 'Cumana',                
              ]
 
         ]);  

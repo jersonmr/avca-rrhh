@@ -13,6 +13,7 @@
         .nav-link:hover {
             color: whitesmoke;
         }
+        
     </style>
 </head>
 <body>
@@ -94,6 +95,7 @@
     <script src="{{ asset('js/fontawesome-all.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap-filestyle.min.js') }}"></script>
     <script src="{{ asset('js/vue.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('js/axios.min.js') }}">
     <script src="{{ asset('js/rrhh.js') }}"></script>
     @yield('scripts')
 </body>

@@ -18,9 +18,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('foto');
             $table->string('nombre');
             $table->string('apellido');
-            $table->integer('cedula')->unique();
-            $table->string('rif')->unique();            
-            $table->integer('codigo_postal')->unique();
+            $table->integer('cedula')->unique();                                
             $table->string('estado');
             $table->string('ciudad');
             $table->string('direccion');
@@ -30,11 +28,12 @@ class CreateEmpleadosTable extends Migration
             $table->date('fecha_nacimiento');
             $table->enum('genero', ['femenino', 'masculino']);
             $table->enum('estado_civil', ['solter@', 'casad@', 'divorciad@', 'viud@', 'concubin@']);
-            $table->enum('nacionalidad', ['venezolan@', 'extranjer@']);
+            $table->enum('nacionalidad', ['V','E']);
             $table->string('telefono_fijo', 15);
             $table->string('telefono_movil', 15);
             $table->string('cod_empleado')->unique();
             $table->enum('condicion_laboral', ['fijo', 'contratado', 'inactivo', 'suplente']);
+            $table->string('banco', 100);
             $table->bigInteger('cuenta_bancaria');
             $table->enum('tipo_empleado', ['administrativo', 'operativo', 'tripulacion']);
             $table->enum('nivel_academico', ['bachiller', 'tsu', 'profesional', 'especialista 1', 'especialista 2']);

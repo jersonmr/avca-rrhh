@@ -23,4 +23,5 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('dashboard', function() {
         return view('admin.gerente.dashboard', $data = [], $mergeData = []);
     });
+    Route::get('obtener-profesiones', 'EmpleadoController@obtenerProfesiones');
 });

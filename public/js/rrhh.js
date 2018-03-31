@@ -23,6 +23,10 @@ const app = new Vue({
                 "codigo": "0166"
             },
             {
+                "banco": 'BANESCO',
+                "codigo": "0134"
+            },
+            {
                 "banco":"BANCO BICENTENARIO",
                 "codigo": "0175"
             },
@@ -136,7 +140,9 @@ const app = new Vue({
             }
         ],
         bancoSelected: 'Seleccione',
-        codigo_cuenta: null
+        codigo_cuenta: null,
+        nivel_academico: null,
+        profesiones: []
     },
     mounted: function () {
         //console.log(this.bancos);
@@ -150,6 +156,20 @@ const app = new Vue({
                     that.codigo_cuenta = element.codigo;
                 }
             })
+        },
+        obtenerProfesiones: function () {
+            axios.get('obtener-profesiones', {
+                params: {
+                    nivel_academico: this.nivel_academico
+                }
+            })
+            .then(function (resultado) {
+                this.profesiones = resultado.data;
+                console.log(this.profesiones);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
         }
     }
 });

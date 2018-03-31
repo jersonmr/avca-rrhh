@@ -17,9 +17,8 @@ class CreateSucursalesTable extends Migration
             $table->increments('id');
             $table->enum('tipo_sucursal', ['administrativa', 'operativa']);
             $table->string('nombre', 255);
-            $table->string('estado', 255);
-            $table->string('ciudad', 255);
-            $table->string('codigo_postal', 20);
+            $table->enum('estatus', ['activa', 'inactiva']);
+            $table->string('ciudad', 255);            
             $table->timestamps();
         });
     }
