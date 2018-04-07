@@ -1,6 +1,10 @@
-@extends('admin.layouts.template')
+@extends('admin.layouts.admin')
 
-@section('scripts')
+@section('content')
+  <contratacion></contratacion>
+@endsection
+
+{{--  @section('scripts')
 <script>
     $(":file").filestyle({
         input: false,
@@ -9,5 +13,5 @@
         btnClass: "btn-primary"
     });    
 </script>
-@endsection
+@endsection  --}}
 
