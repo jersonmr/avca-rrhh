@@ -24,4 +24,11 @@ Route::group(['prefix' => 'admin'], function() {
         return view('admin.gerente.dashboard', $data = [], $mergeData = []);
     });
     Route::get('obtener-profesiones', 'EmpleadoController@obtenerProfesiones');
+    Route::get('obtener-sucursales', 'EmpleadoController@obtenerSucursales');
+    Route::get('obtener-departamentos', 'EmpleadoController@obtenerDepartamentos');
+    Route::get('obtener-cargos', 'EmpleadoController@obtenerCargos');
+    Route::get('obtener-profesiones/{nivel_academico}', 'EmpleadoController@obtenerProfesiones');
+    Route::get('obtener-bancos', 'EmpleadoController@obtenerBancos');
+    Route::get('obtener-estados', 'EmpleadoController@obtenerEstados');
+    Route::get('obtener-tabulador', 'EmpleadoController@obtenerTabuladorSalarial');
 });

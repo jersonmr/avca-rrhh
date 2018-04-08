@@ -5,6 +5,7 @@
     </div>
     <div class="card-block">
       <form action="#">
+        <!--Datos personales-->
         <fieldset>
           <legend>Datos personales</legend>
           <div class="row">
@@ -82,8 +83,9 @@
             <div class="col-md-3">
               <div class="form-group">
                 <label for="estado">Estado</label>
-                <select name="estado" id="estado" class="form-control">
+                <select name="estado" id="estado" class="form-control" v-model="estado" @change="obtenerCiudades">
                   <option value="" selected="selected">Seleccione</option>
+                  <option :value="estado.estado" v-for="estado in venezuela">{{ estado.estado }}</option>
                 </select>
               </div>
             </div>
@@ -92,6 +94,7 @@
                 <label for="ciudad">Ciudad</label>
                 <select name="ciudad" id="ciudad" class="form-control">
                   <option value="" selected="selected">Seleccione</option>
+                  <option :value="ciudad" v-for="ciudad in ciudadesFiltradas">{{ ciudad }}</option>
                 </select>
               </div>
             </div>
@@ -151,14 +154,18 @@
             <div class="col-md-3">
               <div class="form-group">
                 <label for="discapacidad">¿Posee alguna discapacidad?</label> <br>
-                <input type="radio" name="discapacidad" id="discapacidad" value="si"> Si
-                <input type="radio" name="discapacidad" id="discapacidad-no" value="no"> No
+                <input type="radio" name="discapacidad" id="discapacidad" value="si" v-model="discapacidad"> Si
+                <input type="radio" name="discapacidad" id="discapacidad-no" value="no" v-model="discapacidad"> No
               </div>
             </div>
             <div class="col-md-3">
               <div class="form-group">
-                <select name="tipo_discapacidad" id="tipo_discapacidad" class="form-control">
+                <select name="tipo_discapacidad" id="tipo_discapacidad" class="form-control" :disabled="toggleDiscapacidad">
                   <option value="" selected="selected">Seleccione</option>
+                  <option value="trastorno del habla y lenguaje">Trastorno del habla y lenguaje</option>
+                  <option value="visual">Visual</option>
+                  <option value="motriz">Motriz</option>
+                  <option value="auditiva">Auditiva</option>
                 </select>
               </div>
             </div>
@@ -174,22 +181,25 @@
                 <label for="sucursal">Sucursal</label>
                 <select name="sucursal" id="sucursal" class="form-control">
                   <option value="" selected="selected">Seleccione</option>
+                  <option :value="sucursal.id" v-for="sucursal in sucursales">{{ sucursal.nombre | capitalize }}</option>
                 </select>
               </div>
             </div>
             <div class="col-md-3">
               <div class="form-group">
-                <label for="dependencia">Dependencia</label>
-                <select name="dependencia" id="dependencia" class="form-control">
+                <label for="departamento">Departamento</label>
+                <select name="departamento" id="departamento" class="form-control">
                   <option value="" selected="selected">Seleccione</option>
+                  <option :value="departamento.id" v-for="departamento in departamentos">{{ departamento.descripcion | capitalize }}</option>
                 </select>
               </div>
             </div>
             <div class="col-md-3">
               <div class="form-group">
                 <label for="cargo">Cargo</label>
-                <select name="cargo" id="cargo" class="form-control">
+                <select ref="cargo" name="cargo" id="cargo" class="form-control" @change="obtenerTabuladorSalarial" v-model="cargo">
                   <option value="" selected="selected">Seleccione</option>
+                  <option :value="{cargo_id: cargo.id, tabulador_salarial: cargo.tabulador_salarial_id}" v-for="cargo in cargos">{{ cargo.nombre | capitalize }}</option>
                 </select>
               </div>
             </div>
@@ -199,8 +209,13 @@
             <div class="col-md-3">
               <div class="form-group">
                 <label for="nivel_academico">Nivel Académico</label>
-                <select name="nivel_academico" id="nivel_academico" class="form-control">
+                <select name="nivel_academico" id="nivel_academico" class="form-control" v-model="nivel_academico" @change="obtenerProfesiones">
                   <option value="" selected="selected">Seleccione</option>
+                  <option value="bachiller">Bachiller</option>
+                  <option value="tsu">TSU</option>
+                  <option value="profesional">Profesional</option>
+                  <option value="especialista 1">Especialista 1</option>
+                  <option value="especialista 2">Especialista 2</option>
                 </select>
               </div>
             </div>
@@ -209,6 +224,7 @@
                 <label for="profesion">Profesión</label>
                 <select name="profesion" id="profesion" class="form-control">
                   <option value="" selected="selected">Seleccione</option>
+                  <option :value="profesion.id" v-for="profesion in profesiones">{{ profesion.titulo | capitalize }}</option>
                 </select>
               </div>
             </div>
@@ -240,12 +256,15 @@
           <legend>Datos de nómina</legend>
           <div class="row">
             <div class="col-md-2">
-              <label for="nivel"><strong>Nivel</strong></label>
-              Nivel
+              <label>
+                <strong>Nivel:</strong>
+              </label>
+              <template v-if="tabulador !== ''">{{ tabulador[0].cod_nivel }}</template>
             </div>
             <div class="col-md-2">
-              <label for="sueldo_base"><strong>Sueldo base</strong></label>
-              Sueldo base
+              <label><strong>Sueldo base:</strong>
+              </label>
+              <template v-if="tabulador !== ''">{{ tabulador[0].sueldo_base }}</template>
             </div>
             <div class="col-md-8"></div>
           </div>
@@ -253,20 +272,27 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="banco">Banco</label>
-                <select name="banco" id="banco" class="form-control">
+                <select name="banco" id="banco" class="form-control" @change="obtenerCodigoBancario" v-model="banco">
                   <option value="" selected="selected">Seleccione</option>
+                  <option :value="banco.banco" v-for="banco in bancos">{{ banco.banco }}</option>
                 </select>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="form-group">
-                <label for="cuenta_bancaria">Número de cuenta bancaria</label>
+              <label for="cuenta_bancaria">Número de cuenta bancaria</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <input type="text" name="codigo_cuenta" id="codigo_cuenta" readonly :value="codigo_cuenta" size="4" style="border: none; background: transparent;">
+                  </span>
+                </div>
                 <input type="text" name="cuenta_bancaria" id="cuenta_bancaria" class="form-control" placeholder="Número de cuenta bancaria" maxlength="20">
               </div>
             </div>
           </div>
         </fieldset>
 
+        <!--Botones de accion-->
         <div class="row">
           <div class="col-12">
             <div class="form-group">
@@ -282,14 +308,124 @@
       </form>
     </div>
     <div class="card-footer text-muted">
-      Footer
+      <span>&nbsp;</span>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: "Contratacion"
+    name: "Contratacion",
+    data() {
+      return {
+        sucursales: [],
+        departamentos: [],
+        cargos: [],
+        nivel_academico: '',
+        profesiones: [],
+        bancos: [],
+        banco: '',
+        codigo_cuenta: '',
+        venezuela: [],
+        estado: '',
+        ciudades: [],
+        ciudadesFiltradas: [],
+        discapacidad: '',
+        cargo: '',
+        tabulador: ''
+      }
+    },
+    computed: {
+      toggleDiscapacidad: function() {
+        if (this.discapacidad == 'si') return false;
+        else return true;
+      }
+    },
+    created() {
+      this.obtenerSucursales();
+      this.obtenerDepartamentos();
+      this.obtenerCargos();
+      this.obtenerBancos();
+      this.obtenerEstados();
+    },
+    methods: {
+      obtenerSucursales() {
+        axios.get('obtener-sucursales')
+          .then((response) => {
+            this.sucursales = response.data;
+          });
+      },
+      obtenerDepartamentos() {
+        axios.get('obtener-departamentos')
+          .then((response) => {
+            this.departamentos = response.data;
+          });
+      },
+      obtenerCargos() {
+        axios.get('obtener-cargos')
+          .then((response) => {
+            this.cargos = response.data;
+          });
+      },
+      obtenerProfesiones() {
+        axios.get('obtener-profesiones', {
+          params: {
+            nivel_academico: this.nivel_academico
+          }
+        })
+          .then((response) => {
+            this.profesiones = response.data;
+          });
+      },
+      obtenerTabuladorSalarial() {
+        axios.get('obtener-tabulador', {
+          params: {
+            tabulador_salarial_id: this.cargo.tabulador_salarial
+          }
+        })
+          .then((response) => {
+            this.tabulador = response.data;
+          });
+      },
+      obtenerBancos() {
+        axios.get('obtener-bancos')
+          .then((response) => {
+            this.bancos = response.data;
+          });
+      },
+      obtenerCodigoBancario() {
+        var that = this;
+        const banco = this.banco;
+        this.bancos.forEach(function (element) {
+          if (banco === element.banco) {
+            that.codigo_cuenta = element.codigo;
+          }
+        });
+      },
+      obtenerEstados() {
+        axios.get('obtener-estados')
+          .then((response) => {
+            this.venezuela = response.data;
+          });
+      },
+      obtenerCiudades() {
+        this.ciudades = this.venezuela.filter(venezuela => venezuela.estado === this.estado);
+        if (typeof (this.ciudades[0].ciudades) !== 'undefined') {
+          for (let i = 0; i < this.ciudades[0].ciudades.length; i++) {
+            this.ciudadesFiltradas = this.ciudades[0].ciudades;
+          }
+        } else {
+          this.ciudadesFiltradas = '';
+        }
+      }
+    },
+    filters: {
+      capitalize: function (value) {
+        if (!value) return '';
+        value = value.toString();
+        return value.charAt(0).toUpperCase() + value.slice(1);
+      }
+    }
   }
 </script>
 
