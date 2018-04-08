@@ -10,7 +10,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>...</title>
+  <title>Gerencia de RRHH</title>
 
   <!-- Icons -->
   <link href="{{ asset('css/fa-svg-with-js.css') }}" rel="stylesheet">
@@ -23,7 +23,7 @@
 <body class="app">
 <header class="app-header fixed-top">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">AVCA RRHH</a>
+    <a class="navbar-brand" href="{{ route('gerente.dashboard') }}">AVCA RRHH</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#adminHeader"
             aria-controls="adminHeader" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,22 +31,21 @@
 
     <div class="collapse navbar-collapse" id="adminHeader">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item active dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user-circle"></i> Sr. Pepito Perez
+            <i class="fas fa-user-circle"></i> {{ Auth::user()->name }} <span class="caret"></span>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+              {{ __('Salir') }}
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+            </form>
           </div>
         </li>
       </ul>
@@ -58,7 +57,7 @@
     <nav class="sidebar-nav">
       <ul class="nav flex-column h-100">
         <li class="nav-item">
-          <a class="nav-link" href="index.html" style="border-bottom: 1px solid rgba(255,255,255,0.15);"><i class="fas fa-tachometer-alt"></i> Dashboard </a>
+          <a class="nav-link" style="font-size: 1.2rem; color: whitesmoke;" href="#">Gerencia de RRHH </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="collapse" href="#captacionCollapse" role="button" aria-expanded="false" aria-controls="captacionCollapse">

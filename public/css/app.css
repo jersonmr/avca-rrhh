@@ -10225,3 +10225,33 @@ a.text-dark:focus {
   text-transform: uppercase;
 }
 
+.login {
+  font-size: 0.8rem !important;
+}
+
+.login .bg-primary {
+  background-color: #20a8d8 !important;
+}
+
+.login .btn-primary {
+  background-color: #20a8d8;
+  border-color: #20a8d8;
+}
+
+.login .btn-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: #20a8d8;
+  background-color: transparent;
+}
+
+.login .btn-link:hover {
+  text-decoration: none;
+}
+
+.login .input-group .form-control,
+.login .input-group-text {
+  border-radius: 0;
+  background-color: transparent;
+}
+

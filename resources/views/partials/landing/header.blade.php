@@ -8,10 +8,7 @@
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0 smooth-scroll">
           <li class="nav-item active">
             <a class="nav-link" href="#about">¿Quienes sómos? <span class="sr-only">(¿Quienes sómos?)</span></a>
-          </li>                             
-          <li class="nav-item active">
-            <a class="nav-link" href="#organigram">Estructura organizativa <span class="sr-only">(Estructura organizativa)</span></a>
-          </li>                                                                    
+          </li>
           <li class="nav-item active">
             <a class="nav-link" href="#selection">Captación <span class="sr-only">(Captación)</span></a>
           </li>
@@ -22,7 +19,7 @@
             <a class="nav-link" href="#contact">Contáctenos <span class="sr-only">(Contáctenos)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link btn btn-info" href="#">
+            <a class="nav-link btn btn-info" href="/login">
               Acceder <span class="sr-only">(Acceder al sistema)</span>
               <i class="fas fa-lock"></i>
             </a>

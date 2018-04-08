@@ -12,17 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('rrhh', function () {
     return view('rrhh');
-});
+})->middleware('guest');
 
-Route::group(['prefix' => 'admin'], function() {
+/*Route::get('rrhh', function () {
+    return view('rrhh');
+});*/
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('dashboard', function() {
         return view('admin.gerente.dashboard', $data = [], $mergeData = []);
-    });
+    })->name('gerente.dashboard');
     Route::get('obtener-profesiones', 'EmpleadoController@obtenerProfesiones');
     Route::get('obtener-sucursales', 'EmpleadoController@obtenerSucursales');
     Route::get('obtener-departamentos', 'EmpleadoController@obtenerDepartamentos');
@@ -32,3 +32,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('obtener-estados', 'EmpleadoController@obtenerEstados');
     Route::get('obtener-tabulador', 'EmpleadoController@obtenerTabuladorSalarial');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

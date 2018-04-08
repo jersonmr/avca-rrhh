@@ -20,9 +20,22 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-9"></div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Nacionalidad</label> <br>
+                <input type="radio" name="nacionalidad" value="v"> V
+                <input type="radio" name="nacionalidad" value="e"> E
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="cedula">Cédula de identidad</label>
+                <input type="text" name="cedula" id="cedula" class="form-control" maxlength="11" placeholder="Cédula de identidad">
+              </div>
+            </div>
+            <div class="col-md-3"></div>
           </div>
-          <div class="row">
+          <div class="row mt-3">
             <div class="col-md-3">
               <div class="form-group">
                 <label for="apellidos">Apellidos</label>
@@ -54,9 +67,9 @@
             </div>
             <div class="col-md-3">
               <div class="form-group">
-                <label for="genero">Género</label> <br>
-                <input type="radio" name="genero" id="genero" value="femenino"> Femenino
-                <input type="radio" name="genero" id="genero" value="masculino"> Masculino
+                <label>Género</label> <br>
+                <input type="radio" name="genero" value="femenino"> Femenino
+                <input type="radio" name="genero" value="masculino"> Masculino
               </div>
             </div>
             <div class="col-md-3">
@@ -119,7 +132,7 @@
             <div class="col-md-3">
               <label for="telefono_fijo">Teléfono fijo</label>
               <div class="input-group">
-                <input type="text" class="form-control" name="telefono_fijo" id="telefono_fijo" placeholder="Teléfono fijo">
+                <input type="tel" pattern="\d" class="form-control" name="telefono_fijo" id="telefono_fijo" placeholder="Teléfono fijo" maxlength="11">
                 <div class="input-group-append">
                   <span class="input-group-text">
                     <i class="fas fa-phone"></i>
@@ -130,7 +143,7 @@
             <div class="col-md-3">
               <label for="telefono_movil">Teléfono móvil</label>
               <div class="input-group">
-                <input type="text" name="telefono_movil" id="telefono_movil" class="form-control" placeholder="Teléfono movil">
+                <input type="tel" name="telefono_movil" id="telefono_movil" class="form-control" placeholder="Teléfono movil" maxlength="11">
                 <div class="input-group-append">
                   <span class="input-group-text">
                     <i class="fas fa-mobile-alt"></i>
