@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <link rel="stylesheet" href="{{ asset('css/fa-svg-with-js.css') }}">
   <link rel="stylesheet" href="{{ asset('css/rrhh.css') }}">
+  {{-- Owl Carousel --}}
+  <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
   {{-- Header --}}
@@ -15,14 +18,14 @@
 
   <main>
 
+    {{-- Seccion de postulaciones --}}
+    @include('partials.landing.applications')
+
     {{-- About --}}
     @include('partials.landing.about')
 
     {{-- Proceso de seleccion --}}
     @include('partials.landing.selection')
-
-    {{-- Seccion de postulaciones --}}
-    @include('partials.landing.applications')
 
     {{-- Contactenos --}}
     @include('partials.landing.contact')    
@@ -32,6 +35,7 @@
 
   <script src="{{ asset('js/app.js') }}"></script>
   <script src="{{ asset('js/fontawesome-all.min.js') }}"></script>
+  <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
   <script>
     $(document).ready(function() {
       // Select all links with hashes
@@ -70,6 +74,27 @@
             }
           }
         });
+
+      //  Carousel
+      $(".owl-carousel").owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true,
+        responsive:{
+          0:{
+            items:1
+          },
+          600:{
+            items:2
+          },
+          1000:{
+            items:4
+          }
+        }
+      });
     });
   </script>
 </body>

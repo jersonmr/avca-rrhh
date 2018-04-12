@@ -12,6 +12,9 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+// Vendor
+@import "vendor/fonts";
+
 // Core
 @import "core/base";
 
@@ -23,5 +26,6 @@
 @import "components/card";
 
 // Paginas
-@import "pages/rrhh";
+@import "pages/landing/rrhh";
+@import "pages/landing/job";
 @import "pages/login";

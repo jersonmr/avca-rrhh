@@ -31,6 +31,7 @@
     }
   }
   &__hero-text {
+    font-family: $ubuntu-font;
     position: absolute;    
     padding-top: 90px;  
     width: 100%;
@@ -41,7 +42,7 @@
     align-items: flex-end;
     h1 {
       color: white;
-      font-size: 5rem;
+      font-size: 3rem !important;
       width: 100%;
       text-align: center;
     }
@@ -50,12 +51,36 @@
     a {
       color: white;
       font-size: 6rem;
+      span:first-child {
+        font-size: 1.5rem;
+        text-transform: capitalize;
+      }
+      span:last-child {
+        margin-top: -4rem;
+      }
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
 
 // Seccion acerca de nosotros
 .about {
+  background-color: #303031;
+  color: white;
+  .media img {
+    width: 128px;
+  }
+  .media-body {
+    h5 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+      text-align: justify;
+    }
+  }
   &__item {
     margin-bottom: 2rem;
     &:last-child {
@@ -70,6 +95,8 @@
   &__objetives {
     li {
       margin-bottom: 1rem;
+      font-size: 1rem;
+      text-align: justify;
     }
   }
 }
@@ -89,21 +116,29 @@
       text-decoration: none;
     }
   }
+  .card-title {
+    font-size: 1.5rem;
+  }
   .card-text {
+    font-size: 1rem;
     text-align: justify;
   }
 }
 
 // Seccion de aplicaciones
 .applications {
-  background: #2b2929;
+  padding: 66px 0;
+  background-color: white !important;
   .card {
     .card-header {
       background: rgba(0, 0, 0, 0.5) !important;
       color: #fff;
-      font-size: 1.3rem;      
+      font-size: 1.2rem !important;
       text-align: center;
       text-transform: uppercase;      
+    }
+    .card-text {
+      font-size: 1rem;
     }
   }  
 }
@@ -116,4 +151,7 @@
   padding: 1rem;
   text-align: center;
   text-transform: uppercase;
+  &--about {
+    background-color: #818080 !important;
+  }
 }

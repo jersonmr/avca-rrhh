@@ -1,6 +1,6 @@
 <section class="about py-5" id="about">
   <div class="container">
-    <h2 class="rrhh__title">Acerca de nosotros</h2>
+    <h2 class="rrhh__title rrhh__title--about">Acerca de nosotros</h2>
     <div class="row">
       <div class="col-lg-6 pl-3">
         <article class="about__item about__item--mision">

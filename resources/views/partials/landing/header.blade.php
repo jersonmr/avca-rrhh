@@ -7,13 +7,13 @@
       <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0 smooth-scroll">
           <li class="nav-item active">
+            <a class="nav-link" href="#application">Oportunidades <span class="sr-only">(Oportunidades)</span></a>
+          </li>
+          <li class="nav-item active">
             <a class="nav-link" href="#about">¿Quienes sómos? <span class="sr-only">(¿Quienes sómos?)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="#selection">Captación <span class="sr-only">(Captación)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#application">Oportunidades <span class="sr-only">(Oportunidades)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="#contact">Contáctenos <span class="sr-only">(Contáctenos)</span></a>
@@ -31,13 +31,17 @@
 
   <!-- Texto principal -->
   <div class="header__hero-text" id="start">
-    <h1>
+    {{--<h1>
       Alas de Venezuela C.A (AVCA) <br>Gerencia de RRHH
-    </h1>
+    </h1>--}}
 
     <div class="header__hero-arrow">
-      <a href="#about">
-        <i class="fas fa-angle-down"></i>
+      <a href="#application" class="text-center">
+        <span>Únete a nuestro equipo</span>
+        <span class="d-block mx-auto">
+          {{--<i class="fas fa-angle-down"></i>--}}
+          <img src="{{ asset('images/arrow-imagen-down-blanco.png') }}" alt="">
+        </span>
       </a>
     </div>
   </div>

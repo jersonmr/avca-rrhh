@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('rrhh');
-})->middleware('guest');
+Route::group(['middleware' => 'guest'], function() {
+    Route::get('/', function () {
+        return view('rrhh');
+    });
+    Route::get('cargo', 'LandingController@cargo');
+    Route::get('subcargo', 'LandingController@subcargo');
+});
 
 /*Route::get('rrhh', function () {
     return view('rrhh');

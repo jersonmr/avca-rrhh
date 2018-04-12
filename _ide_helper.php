@@ -6498,7 +6498,7 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
-         * Push an array of jobs onto the queue.
+         * Push an array of components onto the queue.
          *
          * @param array $jobs
          * @param mixed $data
