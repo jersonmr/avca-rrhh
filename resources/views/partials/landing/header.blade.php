@@ -32,10 +32,17 @@
   <!-- Texto principal -->
   <div class="header__hero" id="start">
     <div class="header__hero__text">
-      <h1 class="text-info text-left">Únete a <br> nuestro equipo</h1>
+      <h1 class="text-left text-uppercase">
+        Queremos Atraer, <br>
+        Desarrollar y <br>
+        Comprometer <br>
+        Talento Humano
+      </h1>
     </div>
     <div class="header__hero__arrow">
       <a href="#application" class="text-center">
+        <span class="d-block mb-3">Únete a nuestro equipo</span>
+        <br>
         <span class="d-block mx-auto">
           <img src="{{ asset('images/arrow-imagen-down-blanco.png') }}" alt="">
         </span>

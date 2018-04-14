@@ -10324,24 +10324,30 @@ body {
 
 .header__hero__text {
   position: absolute;
-  top: 200px;
-  left: 32px;
-  -ms-text-align-last: right;
+  top: 50%;
+  left: 150px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   text-align: left;
+}
+
+.header__hero__text h1 {
+  color: #15ff73;
+  line-height: 1.5;
 }
 
 .header__hero__arrow a {
   color: white;
-  font-size: 6rem;
+  font-size: 2rem;
 }
 
 .header__hero__arrow a span:first-child {
   font-size: 1.5rem;
-  text-transform: capitalize;
 }
 
 .header__hero__arrow a span:last-child {
   margin-top: -4rem;
+  padding-bottom: 1rem;
 }
 
 .header__hero__arrow a:hover {
@@ -10431,6 +10437,10 @@ body {
 
 .applications .card .card-text {
   font-size: 1rem;
+}
+
+.contact__subscription {
+  font-size: 1.5rem;
 }
 
 .rrhh__title {

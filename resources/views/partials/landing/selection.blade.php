@@ -1,6 +1,6 @@
 <section class="recruitment py-5" id="selection">
   <div class="container">
-    <h2 class="rrhh__title">Proceso de captación de personal</h2>
+    <h2 class="rrhh__title rrhh__title--about">Proceso de captación de personal</h2>
     <div class="card-deck">
       <div class="card">
         <img class="card-img-top" src="/images/reclutamiento.jpeg" alt="Reclutamiento">

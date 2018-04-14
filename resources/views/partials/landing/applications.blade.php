@@ -1,5 +1,6 @@
 <section class="applications" id="application">
   <div class="container">
+    <h2 class="rrhh__title rrhh__title--about">Oportunidades de empleo</h2>
     <div class="owl-carousel owl-theme">
       <div class="item">
         <div class="card">
