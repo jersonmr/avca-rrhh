@@ -61,7 +61,7 @@
             </div>
         </nav>
 
-        <main class="py-4 d-flex flex-row align-items-center" style="min-height: 100vh; background-color: #e4e5e6;">
+        <main class="py-4" style="min-height: 100vh; background-color: #e4e5e6;">
             @yield('content')
         </main>
     </div>

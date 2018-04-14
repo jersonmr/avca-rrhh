@@ -10296,7 +10296,7 @@ body {
   color: #dbd8d8;
 }
 
-.header__hero-text {
+.header__hero {
   font-family: "Ubuntu", sans-serif;
   position: absolute;
   padding-top: 90px;
@@ -10315,28 +10315,36 @@ body {
           align-items: flex-end;
 }
 
-.header__hero-text h1 {
+.header__hero h1 {
   color: white;
   font-size: 3rem !important;
   width: 100%;
   text-align: center;
 }
 
-.header__hero-arrow a {
+.header__hero__text {
+  position: absolute;
+  top: 200px;
+  left: 32px;
+  -ms-text-align-last: right;
+  text-align: left;
+}
+
+.header__hero__arrow a {
   color: white;
   font-size: 6rem;
 }
 
-.header__hero-arrow a span:first-child {
+.header__hero__arrow a span:first-child {
   font-size: 1.5rem;
   text-transform: capitalize;
 }
 
-.header__hero-arrow a span:last-child {
+.header__hero__arrow a span:last-child {
   margin-top: -4rem;
 }
 
-.header__hero-arrow a:hover {
+.header__hero__arrow a:hover {
   text-decoration: none;
 }
 

@@ -30,16 +30,13 @@
   </nav>
 
   <!-- Texto principal -->
-  <div class="header__hero-text" id="start">
-    {{--<h1>
-      Alas de Venezuela C.A (AVCA) <br>Gerencia de RRHH
-    </h1>--}}
-
-    <div class="header__hero-arrow">
+  <div class="header__hero" id="start">
+    <div class="header__hero__text">
+      <h1 class="text-info text-left">Únete a <br> nuestro equipo</h1>
+    </div>
+    <div class="header__hero__arrow">
       <a href="#application" class="text-center">
-        <span>Únete a nuestro equipo</span>
         <span class="d-block mx-auto">
-          {{--<i class="fas fa-angle-down"></i>--}}
           <img src="{{ asset('images/arrow-imagen-down-blanco.png') }}" alt="">
         </span>
       </a>

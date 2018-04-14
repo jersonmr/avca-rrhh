@@ -16,4 +16,4 @@
 
 <hr>
 
-<a href="#" class="btn btn-success">Postularme al cargo</a>
+<aspirante-form></aspirante-form>
