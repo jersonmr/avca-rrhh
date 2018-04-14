@@ -1,9 +1,6 @@
 <template>
   <div class="row">
     <div class="col-12">
-      <a href="#" class="btn btn-success" @click="btnAspiranteForm = !btnAspiranteForm">Postularme al cargo</a>
-    </div>
-    <div class="col-md-6 offset-md-3" v-show="btnAspiranteForm">
       <div id="aspiranteForm" class="aspirante-frm py-5">
         <header class="header-form d-flex">
           <img src="http://via.placeholder.com/64x64" alt="avca logo" class="header-form__img">
@@ -101,11 +98,6 @@
 <script>
   export default {
     name: "AspiranteForm",
-    data() {
-      return {
-        btnAspiranteForm: false
-      }
-    },
   }
 </script>
 
