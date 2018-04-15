@@ -17,6 +17,8 @@ window.Vue = require('vue');
 //Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('aspirante-form', require('./components/front/AspiranteForm'));
 Vue.component('contratacion', require('./components/personal/Contratacion'));
+//Vacante
+Vue.component('vacante-form', require('./components/personal/captacion/vacante/VacanteForm'));
 
 const app = new Vue({
   el: '#app',

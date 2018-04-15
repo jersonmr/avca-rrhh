@@ -16,17 +16,16 @@ class CreateAspirantesTable extends Migration
         Schema::create('aspirantes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('cedula_aspirante')->unique();
+            $table->enum('nacionalidad', ['v', 'e']);
+            $table->date('fecha_nacimiento');
             $table->string('apellido',50);
             $table->string('nombre',50);
             $table->string('email',60)->unique();
-            $table->enum('nivel_academico', ['bachiller', 'tsu', 'licdo', 'licda', 'ing', 'm.sc', 'dr', 'dra']);
-            $table->string('direccion',255);
-            $table->string('estado',50);
-            $table->string('ciudad',50);
             $table->string('telefono_movil',50);
             $table->string('telefono_fijo',50);
             $table->string('curriculum');
-            $table->boolean('estatus');
+            $table->integer('vacante_id')->unsigned();
+            $table->foreign('vacante_id')->references('id')->on('vacantes');
             $table->timestamps();
         });
     }

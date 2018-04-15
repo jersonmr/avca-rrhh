@@ -77,6 +77,7 @@
               </li>
               <li class="nav-item"><a href="#" class="nav-link">Selección</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Contratación</a></li>
+              <li class="nav-item"><a href="{{ route('vacante.create') }}" class="nav-link">Vacantes</a></li>
             </ul>
           </div>
         </li>
@@ -124,7 +125,6 @@
               <li class="nav-item"><a href="#" class="nav-link">Variables de nóminas</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Dependencias</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Sucursales</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Vacantes</a></li>
             </ul>
           </div>
         </li>

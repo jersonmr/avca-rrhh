@@ -15,7 +15,8 @@ class CreateCargosTable extends Migration
     {
         Schema::create('cargos', function (Blueprint $table) {
             $table->increments('id');
-            $table->mediumText('nombre');            
+            $table->mediumText('titulo');
+            $table->string('grupo');
             $table->string('perfil_pdf')->nullable();
             $table->integer('tabulador_salarial_id')->unsigned();
             $table->foreign('tabulador_salarial_id')->references('id')->on('tabuladores_salariales');

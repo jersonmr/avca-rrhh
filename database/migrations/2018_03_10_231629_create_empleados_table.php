@@ -41,6 +41,8 @@ class CreateEmpleadosTable extends Migration
             $table->string('profesion');
             $table->integer('cargo_id')->unsigned();
             $table->integer('perfil_id')->unsigned();
+            $table->integer('sucursal_id')->unsigned();
+            $table->integer('departamento_id')->unsigned();
             $table->timestamps();            
         });
     }

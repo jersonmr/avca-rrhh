@@ -82,7 +82,7 @@
           <img class="card-img-top" src="{{ asset('images/professional.jpeg') }}" alt="Área administrativa">
           <div class="card-img-overlay d-flex align-items-end justify-content-center">
             <p class="card-text">
-              <a href="/cargo?type=area-administrativa" class="btn btn-lg btn-block btn-success">
+              <a href="{{ route('opportunities', ['area administrativa']) }}" class="btn btn-lg btn-block btn-success">
                 <i class="fa fa-plus"></i>
                 Información
               </a>
