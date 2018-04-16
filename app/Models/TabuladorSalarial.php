@@ -9,4 +9,9 @@ class TabuladorSalarial extends Model
     protected $table = "tabuladores_salariales";
 
     protected $fillable = ['nivel', 'sueldo_base'];
+
+    public function cargos()
+    {
+        return $this->belongsTo(Cargo::class);
+    }
 }

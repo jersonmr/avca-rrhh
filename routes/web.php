@@ -38,6 +38,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
         Route::get('crear-vacante', 'VacanteController@create')->name('vacante.create');
         Route::post('publicar-vacante', 'VacanteController@store')->name('vacante.store');
     });
+
+    Route::group(['prefix' => 'cargo'], function() {
+        Route::get('listar-cargos', 'CargoController@list')->name('cargo.list');
+        Route::get('crear-cargo', 'CargoController@create')->name('cargo.create');
+        Route::post('registrar-cargo', 'CargoController@store')->name('cargo.store');
+        Route::get('editar-cargo/{id}', 'CargoController@edit')->name('cargo.edit');
+        Route::post('actualizar-cargo/{id}', 'CargoController@update')->name('cargo.update');
+    });
 });
 
 Route::group(['middleware' => 'auth'], function() {

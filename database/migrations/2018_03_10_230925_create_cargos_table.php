@@ -17,7 +17,7 @@ class CreateCargosTable extends Migration
             $table->increments('id');
             $table->mediumText('titulo');
             $table->string('grupo');
-            $table->string('perfil_pdf')->nullable();
+            $table->string('perfil')->nullable();
             $table->integer('tabulador_salarial_id')->unsigned();
             $table->foreign('tabulador_salarial_id')->references('id')->on('tabuladores_salariales');
             $table->timestamps();

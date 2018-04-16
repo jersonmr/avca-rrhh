@@ -10,4 +10,9 @@ class Cargo extends Model
     {
         return $this->hasMany(Vacante::class);
     }
+
+    public function tabulador()
+    {
+        return $this->hasOne(TabuladorSalarial::class);
+    }
 }

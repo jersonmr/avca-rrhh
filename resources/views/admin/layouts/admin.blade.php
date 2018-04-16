@@ -120,7 +120,7 @@
           </a>
           <div class="collapse" id="mantenimientoCollapse">
             <ul class="nav pl-3 flex-column">
-              <li class="nav-item"><a href="#" class="nav-link">Cargos</a></li>
+              <li class="nav-item"><a href="{{ route('cargo.list') }}" class="nav-link">Cargos</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Calendario feriado</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Variables de nóminas</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Dependencias</a></li>
@@ -161,6 +161,6 @@
 <script src="{{ asset('js/fontawesome-all.min.js') }}"></script>
 <script src="{{ asset('js/tether.min.js') }}"></script>
 <script src="{{ asset('js/pace.min.js') }}"></script>
-
+@yield('script')
 </body>
 </html>
