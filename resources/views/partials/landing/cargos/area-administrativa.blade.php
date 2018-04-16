@@ -10,7 +10,7 @@
   <tbody>
   @foreach($vacantes as $vacante)
     <tr>
-      <td>{{ $vacante->titulo }}</td>
+      <td><a href="{{ route('perfil.show', $vacante->cargo_id) }}">{{ $vacante->titulo }}</a></td>
       <td>{{ $vacante->nombre }}</td>
       <td>{{ $vacante->fecha_publicacion }}</td>
     </tr>

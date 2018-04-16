@@ -14,10 +14,10 @@ class CreateCargosTable extends Migration
     public function up()
     {
         Schema::create('cargos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('cargo_id');
             $table->mediumText('titulo');
             $table->string('grupo');
-            $table->string('perfil')->nullable();
+            $table->longText('perfil')->nullable();
             $table->integer('tabulador_salarial_id')->unsigned();
             $table->foreign('tabulador_salarial_id')->references('id')->on('tabuladores_salariales');
             $table->timestamps();

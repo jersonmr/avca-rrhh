@@ -24,7 +24,7 @@
                 <td>{{ $cargo->grupo }}</td>
                 <td>Bs. {{ $cargo->sueldo_base }}</td>
                 <td>
-                  <a href="{{ route('cargo.edit', $cargo->id) }}" class="btn btn-warning">
+                  <a href="{{ route('cargo.edit', $cargo->cargo_id) }}" class="btn btn-warning">
                     <i class="fas fa-edit"></i>
                     Editar
                   </a>

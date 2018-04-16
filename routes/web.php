@@ -17,6 +17,7 @@ Route::group(['middleware' => 'guest'], function() {
     });
     Route::get('oportunidades/{cargo}', 'LandingController@opportunities')->name('opportunities');
     Route::get('subcargo', 'LandingController@subcargo');
+    Route::get('perfil-cargo/{id}', 'LandingController@verPerfil')->name('perfil.show');
 });
 
 /*Route::get('rrhh', function () {

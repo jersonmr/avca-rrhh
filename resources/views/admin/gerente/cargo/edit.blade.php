@@ -6,7 +6,7 @@
       <div class="card">
         <div class="card-header text-white bg-primary">Editar cargo</div>
         <div class="card-body">
-          <form action="{{ route('cargo.update', $cargo->id) }}" method="post">
+          <form action="{{ route('cargo.update', $cargo->cargo_id) }}" method="post">
             @csrf
             <div class="form-group">
               <label for="titulo">Título</label>

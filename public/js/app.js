@@ -49727,9 +49727,11 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _vm._l(_vm.sucursales, function(sucursal) {
-                    return _c("option", { domProps: { value: sucursal.id } }, [
-                      _vm._v(_vm._s(_vm._f("capitalize")(sucursal.nombre)))
-                    ])
+                    return _c(
+                      "option",
+                      { domProps: { value: sucursal.sucursal_id } },
+                      [_vm._v(_vm._s(_vm._f("capitalize")(sucursal.nombre)))]
+                    )
                   })
                 ],
                 2
@@ -49751,9 +49753,11 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _vm._l(_vm.cargos, function(cargo) {
-                    return _c("option", { domProps: { value: cargo.id } }, [
-                      _vm._v(_vm._s(_vm._f("capitalize")(cargo.titulo)))
-                    ])
+                    return _c(
+                      "option",
+                      { domProps: { value: cargo.cargo_id } },
+                      [_vm._v(_vm._s(_vm._f("capitalize")(cargo.titulo)))]
+                    )
                   })
                 ],
                 2

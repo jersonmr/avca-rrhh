@@ -10315,13 +10315,6 @@ body {
           align-items: flex-end;
 }
 
-.header__hero h1 {
-  color: white;
-  font-size: 3rem !important;
-  width: 100%;
-  text-align: center;
-}
-
 .header__hero__text {
   position: absolute;
   top: 50%;
@@ -10332,8 +10325,17 @@ body {
 }
 
 .header__hero__text h1 {
-  color: #15ff73;
-  line-height: 1.5;
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.header__hero__text h1 span.blue {
+  color: #00b2f3;
+}
+
+.header__hero__text h1 span.green {
+  color: #acce92;
 }
 
 .header__hero__arrow a {

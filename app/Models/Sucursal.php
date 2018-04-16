@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sucursal extends Model
 {
     protected $table = 'sucursales';
+    protected $primaryKey = 'sucursal_id';
 
     public function vacantes()
     {

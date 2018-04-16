@@ -13,14 +13,14 @@
             <label for="sucursal">Sucursal</label>
             <select name="sucursal" id="sucursal" class="form-control">
               <option value="" selected="selected">Seleccione</option>
-              <option :value="sucursal.id" v-for="sucursal in sucursales">{{ sucursal.nombre | capitalize }}</option>
+              <option :value="sucursal.sucursal_id" v-for="sucursal in sucursales">{{ sucursal.nombre | capitalize }}</option>
             </select>
           </div>
           <div class="form-group">
             <label for="cargo">Cargo</label>
             <select name="cargo" id="cargo" class="form-control">
               <option value="" selected="selected">Seleccione</option>
-              <option :value="cargo.id" v-for="cargo in cargos">{{ cargo.titulo | capitalize }}</option>
+              <option :value="cargo.cargo_id" v-for="cargo in cargos">{{ cargo.titulo | capitalize }}</option>
             </select>
           </div>
           <div class="form-group">

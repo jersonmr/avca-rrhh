@@ -40,12 +40,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
-    h1 {
-      color: white;
-      font-size: 3rem !important;
-      width: 100%;
-      text-align: center;
-    }
   }
   &__hero__text {
     position: absolute;
@@ -54,8 +48,15 @@
     transform: translateY(-50%);
     text-align: left;
     h1 {
-      color: #15ff73;
-      line-height: 1.5;
+      color: #fff;
+      font-size: 3rem;
+      line-height: 1.2;
+      span.blue {
+        color: #00b2f3;
+      }
+      span.green {
+        color: #acce92;
+      }
     }
   }
   &__hero__arrow {

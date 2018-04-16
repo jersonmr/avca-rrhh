@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cargo extends Model
 {
+    protected $primaryKey = 'cargo_id';
+    protected $fillable = ['titulo', 'grupo', 'perfil', 'tabulador_salarial_id'];
+
     public function vacantes()
     {
         return $this->hasMany(Vacante::class);
