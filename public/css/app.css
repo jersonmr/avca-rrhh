@@ -10475,7 +10475,17 @@ body {
 }
 
 .login {
+  margin-top: 150px;
+  position: relative;
   font-size: 0.8rem !important;
+}
+
+.login .loginbox {
+  /*position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+  width: 100%;
 }
 
 .login .bg-primary {

@@ -28,14 +28,14 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contacto</a>
-          </li>          
+          </li>
           <li class="nav-item">
             <a class="nav-link btn btn-info" href="#">
               <i class="fa fa-lock text-white"></i>
-              Acceder              
+              Acceder
             </a>
           </li>
-        </ul>        
+        </ul>
       </div>
     </nav>
 
@@ -72,7 +72,7 @@
                         The input is not a valid email address
                       </small>
                     </div>
-                    
+
                     <div class="form-group">
                       <label for="password" class="col-form-label">Password</label>
                       <div class="input-group">
@@ -105,7 +105,7 @@
                       <a href="forgot_password1.html" class="custom-control-description forgottxt_clr">Olvidó su clave?</a>
                     </div>
                   </div>
-                </div>              
+                </div>
                 <div class="form-group">
                   <label class="col-form-label">No tienes una cuenta? </label>
                   <a href="register1.html" class="text-primary"><b>Regístrate</b></a>

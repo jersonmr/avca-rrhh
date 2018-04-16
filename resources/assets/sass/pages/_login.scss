@@ -1,4 +1,13 @@
 .login {
+  margin-top: 150px;
+  position: relative;
+  .loginbox {
+    /*position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    width: 100%;
+  }
   font-size: 0.8rem !important;
   .bg-primary {
     background-color: #20a8d8 !important;
