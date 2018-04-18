@@ -17,7 +17,8 @@ Route::group(['middleware' => 'guest'], function() {
     });
     Route::get('oportunidades/{cargo}', 'LandingController@opportunities')->name('opportunities');
     Route::get('subcargo', 'LandingController@subcargo');
-    Route::get('perfil-cargo/{id}', 'LandingController@verPerfil')->name('perfil.show');
+    Route::get('perfil-cargo/{vacante_id}/{cargo_id}', 'LandingController@verPerfil')->name('perfil.show');
+    Route::post('registrar-aspirante', 'AspiranteController@store');
 });
 
 /*Route::get('rrhh', function () {

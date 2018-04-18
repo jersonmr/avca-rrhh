@@ -14,10 +14,11 @@ class CreateAspirantesTable extends Migration
     public function up()
     {
         Schema::create('aspirantes', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('cedula_aspirante')->unique();
+            $table->increments('aspirante_id');
+            $table->integer('cedula')->unique();
             $table->enum('nacionalidad', ['v', 'e']);
             $table->date('fecha_nacimiento');
+            $table->enum('sexo', ['f', 'm']);
             $table->string('apellido',50);
             $table->string('nombre',50);
             $table->string('email',60)->unique();

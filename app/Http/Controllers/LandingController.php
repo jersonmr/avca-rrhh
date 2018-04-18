@@ -27,11 +27,11 @@ class LandingController extends Controller
         ]);
     }
 
-    public function verPerfil($id)
+    public function verPerfil($vacante_id, $cargo_id)
     {
-        $cargo = Cargo::findOrFail($id);
+        $cargo = Cargo::findOrFail($cargo_id);
 
-        return view('partials.landing.cargos.perfil', compact('cargo'));
+        return view('partials.landing.cargos.perfil', compact('cargo', 'vacante_id'));
     }
 
     public function subcargo()

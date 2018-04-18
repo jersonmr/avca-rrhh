@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/fa-svg-with-js.css') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('style')
 </head>
 <body>
     <div id="app">
