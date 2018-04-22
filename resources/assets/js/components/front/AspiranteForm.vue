@@ -6,6 +6,11 @@
           <p v-for="err in errs.errors" v-text="err[0]"></p>
         </div>
       </div>
+      <div v-if="message">
+        <div class="alert alert-success">
+          <span v-text="message"></span>
+        </div>
+      </div>
       <div id="aspiranteForm" class="aspirante-frm">
         <header class="header-form d-flex">
           <div class="header-form__text ml-3">
@@ -126,8 +131,10 @@
 
         axios.post('/registrar-aspirante', formData)
           .then(res => {
-            console.log(res);
-            this.message = res.data;
+            this.message = res.data.message;
+            Object.keys(this.data.form).forEach((key, index) => {
+              this.data.form[key] = '';
+            })
           })
           .catch(error => {
             console.error(error.response.data.errors);
